@@ -6,6 +6,8 @@ on:
         branches:
             - main
 
+            
+
 jobs:
     test:
         runs-on: self-hosted
@@ -22,6 +24,10 @@ jobs:
               run: |
                     pip install -r requirements.txt
                     pytest -q
+            
+            - name: Adding Path
+              run: |
+                    echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
 
             - name: Build docker image
               run: |
