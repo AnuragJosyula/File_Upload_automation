@@ -27,7 +27,7 @@ jobs:
             
             - name: Adding Path
               run: |
-                    echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
+                    echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
             - name: Build docker image
               run: |
