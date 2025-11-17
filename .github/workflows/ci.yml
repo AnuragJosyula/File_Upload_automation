@@ -23,12 +23,16 @@ jobs:
             - name: Install dependencies
               run: |
                     pip install -r requirements.txt
-                    pytest -q
-            
+
             - name: Adding Path
               run: |
                     echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
-
+            
+            - name: Run tests
+              run: |
+                    pytest
+            
+            
             - name: Build docker image
               run: |
                     docker build -t file-scan-service:latest .
