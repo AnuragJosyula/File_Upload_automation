@@ -4,7 +4,7 @@ services:
   web:
     build: .
     ports:
-      - "8000:8000"
+      - "9000:8000"
     environment:
       - CLAMD_HOST=clamav
       - CLAMD_PORT=3310

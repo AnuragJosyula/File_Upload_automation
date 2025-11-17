@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
 from scanner import scan_bytes
-from .schemas import ScanResult
+from schemas import ScanResult
 
 app = FastAPI(title="File Scan Service")
 
